@@ -1,0 +1,7 @@
+- name: r-unit-tests
+  service: rserve
+  command: ./docker_test.sh
+- name: google-cloud-deployment
+  tag: master
+  service: googleclouddeployment
+  command: /deploy/google_deploy.sh

@@ -1,0 +1,12 @@
+{
+  "defaultEnv": { "ENV": "NODE_ENV" },
+  "test": {
+    "driver": "mysql",
+    "host": "localhost",
+    "database": { "ENV": "NEPTUNE_DB_NAME" },
+    "user": { "ENV": "NEPTUNE_DB_USER" },
+    "password": { "ENV": "NEPTUNE_DB_PASS" },
+    "sql-file": true,
+    "multipleStatements": true
+  }
+}

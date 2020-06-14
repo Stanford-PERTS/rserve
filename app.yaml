@@ -1,0 +1,38 @@
+# Signals App Engine to look for a Dockerfile to build.
+# https://cloud.google.com/appengine/docs/flexible/custom-runtimes/
+runtime: custom
+
+# Flexible environment rather than standard, which we normally use.
+env: flex
+
+# Environment variables to set, which only happens when this file is actually
+# used, i.e. when deployed to App Engine (rather than running as a docker
+# container locally).
+env_variables:
+  RSERVE_DEPLOYED: 'true'
+
+# Make sure only one instance is ever running.
+# Minimum zero is not possible.
+# https://cloud.google.com/appengine/docs/flexible/python/flexible-for-standard-users#scaling_characteristics
+# https://groups.google.com/forum/#!topic/google-appengine/uaiyicw6rhg
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 1
+
+# Designed to trigger machine type n1-highmem-4
+# https://cloud.google.com/compute/docs/machine-types
+resources:
+  cpu: 4
+  memory_gb: 24
+  disk_size_gb: 10
+
+skip_files:
+- \.git
+- \.RData
+- \.Rapp\.history
+- node_modules
+- nodemon\.json
+- package-lock\.json
+# - package\.json  # needed to install R dependencies!
+- tests
+- \.csv$

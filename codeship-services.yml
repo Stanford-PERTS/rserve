@@ -1,0 +1,11 @@
+rserve:
+  build:
+    image: rserve
+    dockerfile: Dockerfile
+googleclouddeployment:
+  image: codeship/google-cloud-deployment
+  encrypted_env_file:
+    - google-credentials.encrypted
+  add_docker: true
+  volumes:
+    - ./:/deploy

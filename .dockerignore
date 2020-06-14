@@ -1,0 +1,14 @@
+# Exclude as much as possible from the docker build to make things fast.
+# Only keep what's needed to run in production and run unit test in CI.
+.git
+node_modules/
+data/
+
+# These are e2e test with full copies of Neptune, Triton, and Saturn, each with
+# their own node_modules. Lots of bytes we can exclude.
+test/
+
+# This can be downloaded from project settings in Codeship. Used to encrypt
+# environment variable files. Don't copy into any containers.
+# https://documentation.codeship.com/pro/builds-and-configuration/environment-variables/#encrypted-environment-variables
+codeship.aes

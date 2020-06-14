@@ -1,0 +1,11 @@
+{
+  "defaultEnv": { "ENV": "NODE_ENV" },
+  "test": {
+    "driver": "mysql",
+    "host": "localhost",
+    "user": "root",
+    "password": { "ENV": "MYSQL_PASSWORD" },
+    "sql-file": true,
+    "multipleStatements": true
+  }
+}

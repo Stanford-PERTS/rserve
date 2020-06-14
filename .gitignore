@@ -1,0 +1,16 @@
+# MacOS
+.DS_Store
+
+# RStudio
+.Rapp.history
+
+data
+node_modules
+*.csv
+*.sublime-*
+
+# This can be downloaded from project settings in Codeship. Don't commit.
+# Used to encrypt environment variable files.
+# https://documentation.codeship.com/pro/builds-and-configuration/environment-variables/#encrypted-environment-variables
+codeship.aes
+.Rproj.user

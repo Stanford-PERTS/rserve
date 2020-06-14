@@ -1,0 +1,12 @@
+{
+  "defaultEnv": { "ENV": "NODE_ENV" },
+  "test": {
+    "driver": "mysql",
+    "host": "localhost",
+    "database": { "ENV": "SATURN_DB_NAME" },
+    "user": { "ENV": "SATURN_DB_USER" },
+    "password": { "ENV": "SATURN_DB_PASS" },
+    "sql-file": true,
+    "multipleStatements": true
+  }
+}

@@ -1,0 +1,12 @@
+[submodule "gymnast"]
+	path = gymnast
+	url = git@github.com:PERTS/gymnast.git
+[submodule "test/triton"]
+	path = test/triton
+	url = git@github.com:PERTS/triton.git
+[submodule "test/saturn"]
+	path = test/saturn
+	url = git@github.com:PERTS/saturn.git
+[submodule "test/neptune"]
+	path = test/neptune
+	url = git@github.com:PERTS/neptune.git
